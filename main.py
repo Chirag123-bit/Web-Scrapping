@@ -16,7 +16,7 @@ soup = BeautifulSoup(contents, "html.parser")
 
 #Get title of that webpage
 Title = soup.title
-print(Title)
+"print(Title)"
 
 
 #Get all Paragraphs of that webpage
@@ -25,5 +25,17 @@ paras = soup.find_all("p")
 #print(paras)
 
 tagss = soup.find_all("a")
-print(tagss)
+#print(tagss)
 
+#Get class
+print(soup.find("p")["class"])
+
+
+#Find all elements with class lead
+print(soup.find_all("p",class_= "lead"))
+
+#Extract text from tags/soup
+print(soup.find("p").get_text())
+
+#Extract text from tags/soup (Whole site)
+print(soup.get_text())
