@@ -39,3 +39,15 @@ print(soup.find("p").get_text())
 
 #Extract text from tags/soup (Whole site)
 print(soup.get_text())
+
+anchors = soup.find_all("a")
+links = set()
+
+for link in anchors:
+    if link.get("href") != "#":
+        new_link = "https://codewithharry.com/"+link.get("href")
+        links.add(new_link)
+
+for i in links:
+    print(i)
+
