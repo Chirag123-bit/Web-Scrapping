@@ -26,7 +26,7 @@ weather = pd.DataFrame({
                             "Temperature":temps
                         })
 tim = datetime.datetime.now()
-print("\t","\t" f"Weather Update for: {tim.strftime('%x')}" ,"\t", "\t")
+print("\t","\t" f"Weather Update for Los Angeles On: {tim.strftime('%x')}" ,"\t", "\t")
 print("\n")
 print(weather)
 
